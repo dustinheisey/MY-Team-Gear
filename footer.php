@@ -17,7 +17,7 @@
                 <p><a href="tel:+8172033606" class="link link-light link-info">817-203-3606</a></p>
                 <p><a href="mailto:sales@my-teamgear.com" class="link link-light link-info">sales@my-teamgear.com</a></p>
                 <p class="link link-light link-copywrite">Powered by Hexaprint LLC</p>
-                <small class="link link-light link-copywrite">&copy; 2018 <a href="https://www.dustinheisey.com" target="_blank" class="link link-light link-name">Dustin Heisey</a></small>
+                <small class="link link-light link-copywrite">&copy; 2018 <a href="https://www.getdallaswebdesign.com" target="_blank" class="link link-light link-name">Dustin Heisey</a></small>
             </div>
         </footer>
 
