@@ -1,0 +1,308 @@
+.img {
+  &-branding {
+    &-vertical {
+      height: 15vh;
+      display: none;
+    }
+
+    &-horizontal {
+      height: 12vh;
+    }
+  }
+
+  &-donate {
+    display: none;
+  }
+
+  &-sublimation {
+    display: none;
+  }
+
+  &-category {
+  }
+
+  &-track {
+    width: 100%;
+  }
+}
+
+.element {
+  &-nav {
+    margin: 2vh;
+
+    &:last-child {
+      margin-bottom: 5vh;
+    }
+  }
+
+  &-add-span {
+    display: block;
+  }
+
+  &-sublimation {
+    margin: 1vmin 0;
+  }
+}
+
+.list {
+  &-footer {
+    margin: 1vh;
+  }
+}
+
+.btn {
+  border-style: solid;
+  border-width: 3px;
+  background-color: transparent;
+  box-shadow: var(--shadow);
+  transition: 0.3s all;
+  padding: 3vh 5vw;
+
+  &:hover {
+    box-shadow: var(--shadow-hover);
+  }
+
+  &-nav {
+    background-color: var(--accent-1);
+    padding: 3vh 30vw;
+    text-align: center;
+    &:hover {
+      background-color: var(--accent-2);
+    }
+
+    &-active {
+      background-color: var(--accent-2);
+    }
+  }
+
+  &-landing {
+    display: none;
+
+    &-mobile {
+    }
+  }
+
+  &-dark {
+    border-color: var(--primary-dark);
+    &:hover {
+    }
+  }
+
+  &-light {
+    border-color: var(--primary-light);
+    &:hover {
+    }
+  }
+
+  &-sublimation {
+    padding: 1vh;
+  }
+}
+
+.toggle {
+  font-size: 4rem;
+  cursor: pointer;
+}
+
+#toggle {
+  display: none;
+}
+
+#toggle:checked ~ .container-nav {
+  display: flex;
+}
+
+// Tablet
+@include for-tablet-portrait-up {
+  .img {
+    &-category {
+      width: 100%;
+      border: 3px solid var(--primary-dark);
+      border-bottom: none;
+      box-shadow: var(--shadow);
+    }
+
+    &-branding {
+      &-vertical {
+        display: inline-block;
+        height: 25vh;
+        margin: 0;
+      }
+      &-horizontal {
+        display: none;
+      }
+    }
+
+    &-donate {
+      display: block;
+      margin: 3vmin;
+      width: 20%;
+    }
+
+    &-sublimation {
+      display: block;
+      grid-row: 2/4;
+      grid-column: 2/3;
+      width: 100%;
+      box-shadow: var(--shadow);
+    }
+  }
+
+  .btn {
+    &-nav {
+      padding: 1vh 3vw;
+
+      &-active {
+        background-color: var(--accent-2);
+      }
+    }
+    &-add {
+      padding: 1vh 5vw;
+      align-self: flex-start;
+      margin: 1vh 0 0 0;
+    }
+
+    &-landing {
+      display: inline-block;
+
+      &-mobile {
+        display: none;
+      }
+    }
+  }
+
+  .list {
+    &-footer {
+      margin: 0 1.5rem;
+    }
+  }
+
+  .element {
+    &-nav {
+      margin: 0vh;
+      margin-right: 3vw;
+
+      &:last-child {
+        margin-bottom: 0vh;
+        margin-right: 0;
+      }
+    }
+
+    &-add-span {
+      font-size: 3rem;
+    }
+
+    &-question {
+      font-size: 100px;
+    }
+  }
+
+  .toggle {
+    display: none;
+  }
+}
+
+// Desktop
+@include for-desktop-up {
+  .img {
+    &-branding {
+      &-vertical {
+        display: block;
+        height: 13vh;
+        margin-left: 15vh;
+      }
+
+      &-horizontal {
+        display: none;
+      }
+    }
+
+    &-donate {
+      width: 25%;
+    }
+
+    &-sublimation {
+      display: block;
+      grid-row: 2/4;
+      grid-column: 2/3;
+      width: 100%;
+      box-shadow: var(--shadow);
+    }
+
+    &-category {
+      width: 100%;
+      border: 3px solid var(--primary-dark);
+      border-bottom: none;
+      box-shadow: var(--shadow);
+    }
+  }
+
+  .list {
+    &-footer {
+      margin: 0 1.5rem;
+    }
+  }
+
+  .btn {
+    border-style: solid;
+    border-width: 3px;
+    background-color: transparent;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    &-nav {
+      background-color: var(--accent-1);
+      border-color: var(--primary-dark);
+      transition: all 0.2s;
+      margin: 0 1rem;
+      &:hover {
+        background-color: var(--accent-2);
+      }
+
+      &-active {
+        background-color: var(--accent-2);
+      }
+    }
+
+    &-landing {
+      padding: 2rem 3.5rem;
+    }
+
+    &-dark {
+      border-color: var(--primary-dark);
+      transition: 0.3s all;
+
+      &:hover {
+        background-color: var(--primary-light);
+      }
+    }
+
+    &-light {
+      border-color: var(--primary-light);
+      transition: 0.3s all;
+
+      &:hover {
+        background-color: var(--primary);
+      }
+    }
+
+    &-sublimation {
+      align-self: flex-start;
+      // margin-left: 3rem;
+    }
+
+    &-add {
+      margin: 0;
+      padding: 0 1vw;
+    }
+  }
+
+  .element {
+    &-add-span {
+      font-size: 3rem;
+    }
+  }
+
+  .toggle {
+    display: none;
+  }
+}

@@ -1,0 +1,340 @@
+// Global
+@font-face {
+  font-family: "bebas";
+  src: url("assets/fonts/bebas.otf") format("opentype");
+}
+
+body {
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--primary-dark);
+}
+
+h1,
+h2,
+h3,
+p,
+a,
+small {
+  font-family: bebas;
+}
+
+h2 {
+}
+
+h3 {
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+a {
+  color: var(--primary-dark);
+
+  &:active {
+    color: var(--primary-dark);
+  }
+}
+.link {
+  text-decoration: none;
+  font-size: 2rem;
+  &-dark {
+    color: var(--primary-dark);
+  }
+
+  &-light {
+    color: var(--primary-light);
+    &:hover {
+      color: var(--primary);
+    }
+  }
+
+  &-branding {
+    &-vertical {
+      display: none;
+    }
+
+    &-horizontal {
+    }
+  }
+
+  &-landing {
+    font-size: 3rem;
+  }
+
+  &-btn {
+    font-size: 3rem;
+    &-light {
+      &:hover {
+      }
+    }
+  }
+
+  &-track {
+    width: 85%; margin-right: 2%;
+  }
+
+  &-info {
+    font-size: 2rem;
+    color: var(--primary-light);
+
+    &:hover {
+      color: var(--primary-dark);
+    }
+  }
+
+  &-copywrite {
+    &:hover {
+      color: var(--primary-light);
+    }
+  }
+
+  &-name {
+    &:hover {
+      color: var(--primary-dark);
+    }
+  }
+}
+
+.title {
+  &-header {
+    font-size: 5rem;
+    text-align: center;
+  }
+  &-landing {
+    font-size: 5rem;
+    text-align: center;
+    color: var(--primary-light);
+  }
+
+  &-donate {
+    font-size: 5rem;
+    text-align: center;
+  }
+
+  &-sublimation {
+    text-align: left;
+    font-size: 4rem;
+  }
+
+  &-categories {
+    font-size: 5rem;
+    text-align: center;
+  }
+
+  &-category {
+    &:active {
+      color: var(--primary-dark);
+    }
+  }
+
+  &-add {
+  }
+
+  &-ship {
+    font-size: 5rem;
+  }
+}
+
+.text {
+  &-sublimation {
+    font-size: 2.5rem;
+  }
+}
+
+// Tablet
+@include for-tablet-portrait-up {
+  .title {
+    &-landing {
+      font-size: 10rem;
+    }
+
+    &-category {
+      font-size: 4rem;
+      text-align: center;
+    }
+
+    &-add {
+      font-size: 2.3rem;
+      text-align: left;
+    }
+
+    &-sublimation {
+      text-align: left;
+    }
+  }
+
+  .link {
+    &-btn {
+      &-light {
+        &:hover {
+          color: var(--primary-light);
+        }
+      }
+    }
+
+    &-track {
+      width: 20%; margin-right: 2%;
+    }
+
+    &-info {
+      font-size: 1.6rem;
+      margin-right: 1vw;
+
+      &:hover {
+        color: var(--primary);
+      }
+    }
+
+    &-copywrite {
+      font-size: 1.6rem;
+      margin: 0 1vmin;
+    }
+
+    &-name {
+      font-size: 1.6rem;
+
+      &:hover {
+        color: var(--primary);
+      }
+    }
+
+    &-branding {
+      &-vertical {
+        display: inline-block;
+      }
+
+      &-horizontal {
+        display: none;
+      }
+    }
+  }
+
+  .btn {
+    cursor: pointer;
+    &-landing {
+      display: inline-block;
+
+      &:hover {
+        background-color: var(--primary);
+      }
+    }
+  }
+}
+
+//Desktop
+@include for-desktop-up {
+  .link {
+    text-decoration: none;
+    font-size: 2rem;
+    &-dark {
+      color: var(--primary-dark);
+    }
+
+    &-light {
+      color: var(--primary-light);
+      transition: 0.3s all;
+
+      &:hover {
+        color: var(--primary);
+      }
+    }
+
+    &-branding {
+      &-vertical {
+      }
+
+      &-horizontal {
+      }
+    }
+
+    &-landing {
+      font-size: 3rem;
+    }
+
+    &-btn {
+      font-size: 3rem;
+
+      &-light {
+        &:hover {
+          color: var(--primary-light);
+        }
+      }
+    }
+
+    &-track {
+      width: 15%; margin-right: 2%;
+    }
+
+    &-info {
+      margin: 0 1rem;
+      font-size: 1.6rem;
+    }
+
+    &-copywrite {
+      font-size: 1.6rem;
+      &:hover {
+        color: var(--primary-light);
+      }
+    }
+
+    &-name {
+      font-size: 1.6rem;
+      transition: 0.3s all;
+
+      :hover {
+        color: var(--primary);
+      }
+    }
+  }
+
+  .title {
+    &-header {
+      font-size: 6rem;
+    }
+    &-landing {
+      font-size: 10rem;
+      color: var(--primary-light);
+    }
+
+    &-donate {
+      font-size: 8rem;
+    }
+
+    &-sublimation {
+      font-size: 6rem;
+      text-align: left;
+    }
+
+    &-categories {
+      font-size: 8rem;
+      margin: 3rem;
+    }
+
+    &-category {
+      font-size: 3rem;
+      text-align: center;
+      border: 3px solid var(--primary-dark);
+      border-top: none;
+    }
+
+    &-add {
+      border: none;
+      font-size: 2.3rem;
+      text-align: start;
+      margin: 0;
+    }
+
+    &-ship {
+      font-size: 9rem;
+    }
+  }
+
+  .text {
+    &-sublimation {
+      font-size: 3rem;
+      // margin: 3rem;
+    }
+  }
+}
